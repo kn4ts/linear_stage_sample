@@ -3,7 +3,7 @@
 ※装置のマニュアルおよび専用ソフト`EZED3`のダウンロードページはWeb上で見つからなかったので記載していません．持っている方から直接もらってください．詳しいピンアサイン，パルス入力の仕様等はマニュアルに詳しいのでそちらも併せて参照ください．
 
 ## 装置構成
-+ リニアステージ ... OrientalMotor, 
++ リニアステージ ... OrientalMotor, ELSM4XE050K
 + ドライバ（アンプ） ... OrientalMotor, EDR36D-K
 + ドライバとPCの通信ケーブル ... OrientalMotor, CC05IF-USB
 + 電源装置（DC24V）
@@ -51,8 +51,8 @@
 ※Arduinoの仕様上，5，6番ピンのPWM出力は960Hz（？）なので，距離にして1秒間で10mmほど駆動する．  
 
 Arduinoを用いた配線例  
-![Arduinoを用いた配線例]()
-![Arduinoを用いた配線図]()
+![Arduinoを用いた配線例](https://github.com/kn4ts/linear_stage_sample/blob/master/fig/hardware.jpg)
+![Arduinoを用いた配線図](https://github.com/kn4ts/linear_stage_sample/blob/master/fig/connection.jpg)
 
-* 注意1）順駆動，逆駆動は5Vのパルス列信号でそのまま駆動できますが，__原点復帰信号はDC24V駆動__ですので工夫が必要です．今回はリレーを使用しましたがFETでもいいと思います．
+* 注意1）順駆動，逆駆動は5Vのパルス列信号でそのまま駆動できますが， __原点復帰信号はDC24V駆動__ ですので工夫が必要です．今回はリレーを使用しましたがFETでもいいと思います．
 * 注意2）この構成では電源装置の出力からアンプと並列でDC24Vをとって使用しています．アンプ内部に6.8kΩの内部抵抗があるそうなので，直接流し込んで大丈夫と判断しました．
